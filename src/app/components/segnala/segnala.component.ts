@@ -35,8 +35,14 @@ export class SegnalaComponent implements OnInit {
       text: message,
       url: 'http://www.infami.app/',
       dialogTitle: 'Condividi con INFAMI'
-    });
+    })
+    .then(() => console.log('Successful share'))
+    .catch((error) => console.log('Error sharing', error));
+
+    // const sharePromise = navigator.share();
   }
+
+
 
   async presentToast() {
     const toast = await this.toastController.create({
