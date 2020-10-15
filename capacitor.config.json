@@ -1,0 +1,13 @@
+{
+  "appId": "io.michelecriscuolo.infami",
+  "appName": "infami",
+  "bundledWebRuntime": false,
+  "npmClient": "npm",
+  "webDir": "www",
+  "plugins": {
+    "SplashScreen": {
+      "launchShowDuration": 0
+    }
+  },
+  "cordova": {}
+}

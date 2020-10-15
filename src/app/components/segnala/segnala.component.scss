@@ -1,0 +1,29 @@
+ion-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    --overflow: hidden;
+}
+
+.header-card {
+    margin-top: 0;
+    margin-left: 0;
+    margin-right: 0;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+.header-ios ion-toolbar:last-of-type {
+    --border-width: 0 !important;
+}
+
+ion-select.full {
+    width: 100% !important;
+    max-width: 100% !important;
+}
+
+ion-button {
+    --border-radius: 25px;
+}

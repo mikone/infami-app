@@ -1,0 +1,64 @@
+<ion-content>
+    <ion-header style="display: initial; position: inherit;">
+      <ion-card class="header-card ion-card-color card-1">
+        <hr>
+        <ion-card-header style="padding-bottom: 0">
+          <ion-row>
+            <ion-col size="10">
+              <h4 style="color: white;">Il tuo vicino stronzo ti ha segnalato perchè non ha nulla di meglio da fare.</h4>
+            </ion-col>
+            <ion-col size="2">
+              <ion-icon style="width: 100%; height:100px; display: flex; align-items: center; justify-content: center; color: white;" name="warning-outline"></ion-icon>
+            </ion-col>
+          </ion-row>
+        </ion-card-header>
+      
+        <ion-card-content>
+          <small style="color: white;">Scopri subito dove nascondere gli alcolici >>></small>
+        </ion-card-content>
+      </ion-card>
+
+      <ion-card class="header-card ion-card-color">
+        <hr>
+        <ion-card-header>
+          <ion-row>
+            <ion-col size="10">
+              <ion-card-title><span style="color: #824042;">BENVENUTO</span> <br> <span style="color:#cb2636">Infame</span></ion-card-title>
+            </ion-col>
+            <ion-col size="2">
+              <ion-icon style="width: 100%; height:65px; display: flex; align-items: center; justify-content: center; color: #d33c43" name="shield-checkmark-outline"></ion-icon>
+            </ion-col>
+          </ion-row>
+        </ion-card-header>
+      
+        <ion-card-content>
+          <span style="color:#826569">
+            Infami è la prima app che ti permette di segnalare quella persona che hai sempre odiato.
+          </span>
+        </ion-card-content>
+      </ion-card>
+    </ion-header>
+
+    <ion-list lines="none">
+        <ion-item (click)="info()">
+          <ion-img src="assets/images/infame-alla-finestra.png" style="top: 6%; height: 68%; position: absolute; width: 80%; z-index: 10; right: -20%;"></ion-img>
+            <ion-card class="ion-activatable ion-card-color ripple-parent" style="width: 100%; height:100px; display: flex; align-items: center; justify-content: center; border-radius:25px;">
+              <ion-card-content style="margin-right: 20%">
+                <span style="color: #824042;">Infami tutela la tua privacy ma non quella dei tuoi vicini.</span><br>
+                <small style="color:#cb2636">Venderemo i loro dati alla Cina >>></small>
+              </ion-card-content>
+              <ion-ripple-effect></ion-ripple-effect>
+            </ion-card>
+        </ion-item>
+        <ion-item (click)="segnala()">
+            <ion-card class="ion-activatable ion-card-color-red ripple-parent" style="width: 100%; height:100px; display: flex; align-items: center; justify-content: center; border-radius:25px;">
+              <ion-card-content>
+                <ion-text color="light">
+                  <h1 style="text-transform: uppercase;">Fai una segnalazione</h1>
+                </ion-text>
+              </ion-card-content>
+              <ion-ripple-effect></ion-ripple-effect>
+            </ion-card>
+        </ion-item>
+    </ion-list>
+</ion-content>

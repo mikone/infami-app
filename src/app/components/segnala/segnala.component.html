@@ -1,0 +1,48 @@
+<ion-content fullscreen>
+
+  <ion-header style="display: initial; position: inherit;">
+    <ion-card class="header-card">
+      <ion-toolbar>
+        <ion-buttons slot="end">
+          <ion-button size="large" (click)="dismissModal()"><ion-icon slot="start" name="close-outline"></ion-icon></ion-button>
+        </ion-buttons>
+      </ion-toolbar>
+      <ion-card-header>
+        <ion-card-title>SEGNALA il furbetto</ion-card-title>
+      </ion-card-header>
+    
+      <ion-card-content>
+      </ion-card-content>
+    </ion-card>
+  </ion-header>
+
+  <ion-list lines="full" class="ion-margin" style="margin-top:20%">
+    <ion-list-header lines="none">
+      <ion-label>
+        COSA VUOI SEGNALARE?
+      </ion-label>
+    </ion-list-header>
+    <ion-item>
+      <ion-select class="full" value="cosa" interface="action-sheet" [(ngModel)]="model.cosa">
+        <ion-select-option value="matromonio">Matrimonio Abusivo</ion-select-option>
+        <ion-select-option value="cena">Cena tra amici con più di 5 persone</ion-select-option>
+        <ion-select-option value="mascherina">In strada senza mascherina</ion-select-option>
+        <ion-select-option value="lamentoso">Lamento contro le mascherine</ion-select-option>
+      </ion-select>
+    </ion-item>
+    </ion-list>
+
+  <ion-list lines="full" class="ion-margin" style="margin-bottom: 20%;">
+    <ion-list-header lines="none">
+      <ion-label>
+        CHI VUOI SEGNALARE?
+      </ion-label>
+    </ion-list-header>
+    <ion-item>
+      <ion-input [(ngModel)]="model.chi"></ion-input>
+    </ion-item>
+  </ion-list>
+    
+  <ion-button expand="block" color="danger" shape="round" class="ion-margin" style="height: 80px;" (click)="segnala()"><h3>INVIA SEGNALAZIONE</h3></ion-button>
+
+</ion-content>
