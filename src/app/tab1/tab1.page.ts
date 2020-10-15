@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { IonRouterOutlet, ModalController } from '@ionic/angular';
 import { SegnalaComponent } from '../components/segnala/segnala.component';
 
@@ -9,16 +10,14 @@ import { SegnalaComponent } from '../components/segnala/segnala.component';
 })
 export class Tab1Page {
 
-  constructor(private modalController: ModalController, private routerOutlet: IonRouterOutlet) {}
+  constructor(private modalController: ModalController, private routerOutlet: IonRouterOutlet, private router: Router) {}
 
 
-  info () 
-  {
-    console.log("info");
+  info () {
+    this.router.navigate(['tabs/tab2']);
   }
 
-  segnala ()
-  {
+  segnala () {
     this.presentModal();
   }
 
@@ -30,6 +29,5 @@ export class Tab1Page {
     });
     return await modal.present();
   }
-
 
 }
