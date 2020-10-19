@@ -36,18 +36,29 @@ export class SegnalaComponent implements OnInit {
       url: 'http://www.infami.app/',
       dialogTitle: 'Condividi con INFAMI'
     })
-    .then(() => console.log('Successful share'))
-    .catch((error) => console.log('Error sharing', error));
-
-    // const sharePromise = navigator.share();
+    .then(() => this.presentToastSuccess())
+    .catch((error) => {
+      console.log('Error sharing', error)
+      this.presentToastCancel();
+    });
   }
 
 
 
-  async presentToast() {
+  async presentToastSuccess() {
     const toast = await this.toastController.create({
       message: 'Grazie per rendere il mondo un posto più sicuro. INFAME!',
       color: 'success',
+      position: 'top',
+      duration: 2000
+    });
+    toast.present();
+  }
+
+  async presentToastCancel() {
+    const toast = await this.toastController.create({
+      message: 'OPS sembra ci sia un errore',
+      color: 'danger',
       position: 'top',
       duration: 2000
     });
